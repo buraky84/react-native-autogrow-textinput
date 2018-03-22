@@ -63,10 +63,6 @@ export default class AutoGrowingTextInput extends Component {
   }
 
   clear() {
-    if (ANDROID_PLATFORM) {
-      // fix for predictive text issues can be removed once https://github.com/facebook/react-native/pull/12462 is merged
-      AutoGrowTextInputManager.resetKeyboardInput(ReactNative.findNodeHandle(this._textInput))
-    }
     return this._textInput.clear();
   }
 
